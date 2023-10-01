@@ -1,9 +1,9 @@
-ASTRA_DB_SECURE_BUNDLE_PATH=r"C:\Users\baybl\OneDrive\Documents\Python Scripts\Vector Embeddings\secure-connect-vector-database.zip"
-ASTRA_DB_APPLICATION_TOKEN = "AstraCS:DtAxWMIpeSkOQJmKnQhOYscA:0a0bda51453935a8b8e89674f998edd7b05d740fcbbe8d78d63d327a22036ac0" #"AstraCS:..."
-ASTRA_DB_CLIENT_ID = "DtAxWMIpeSkOQJmKnQhOYscA"
-ASTRA_DB_CLIENT_SECRET = "8QpxKObLyTEUQreZa9mnLrhW,b9EKNy4,negnrvKTn4MLUcqpUduPSZQnK69tt-wOv-LsZx3e2.uewmRmwU.UZDWret3modZ+qsX3p.ZACmHg-,j_QKTYZ_,tA2fL8O," 
-ASTRA_DB_KEYSPACE="search"
-OPENAI_API_KEY = "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"
+ASTRA_DB_SECURE_BUNDLE_PATH= "Replace with your secure-connect-vector-database.zip location"
+ASTRA_DB_APPLICATION_TOKEN = "Replace with the \"token\" string provided after generating a token from Astra"
+ASTRA_DB_CLIENT_ID = "Replace with the \"clientid\" string provided after generating a token from Astra"
+ASTRA_DB_CLIENT_SECRET = "Replace with the \"secret\" string provided after generating a token from Astra" 
+ASTRA_DB_KEYSPACE="Replace with whatever you declared your keyspace word to be"
+OPENAI_API_KEY = "Replace with you generated OpenAI API key"
 
 from langchain.vectorstores.cassandra import Cassandra
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
@@ -15,9 +15,8 @@ from cassandra.auth import PlainTextAuthProvider
 
 from datasets import load_dataset
 
-# Creating a cluster
-# Configuration to be able to communicate with the database created with
-# DataStax Astra.
+# Creating a cluster Configuration to be able to communicate with the 
+# database created with DataStax Astra.
 cloud_config= {
    'secure_connect_bundle': ASTRA_DB_SECURE_BUNDLE_PATH 
 }
